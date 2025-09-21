@@ -1,5 +1,3 @@
-How to compile:
-
 1. Compile Command:
 
 gcc -I "/Users/gerrickmundt/Documents/VS Code/C Code Projects/Project 1_Custom_Header_Utilization/Include" \
