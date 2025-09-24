@@ -9,7 +9,6 @@ typedef struct
     const char *name;
 } ID_Entry;
 
-const char* Get_Test_Name(uint32_t input_value);
+const char* Get_ID_Name(uint32_t input_value);
 
 #endif
-
