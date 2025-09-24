@@ -1,5 +1,7 @@
+// stdio.h is a header file in C that provides a set of functions for input/output operations
 #include <stdio.h>
-#include "TestID_Lookup"
+// Custom header file with definitions for called function and structs
+#include "TestID_Lookup.h"
 
 int main()
 {
@@ -27,3 +29,4 @@ int main()
     }
 return 0;
 }
+
