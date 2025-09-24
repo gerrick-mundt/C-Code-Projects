@@ -15,9 +15,15 @@ int main()
     // call the getter function for the test name value
     const char* Test_Name = Get_Test_Name(test_input_value);
 
-    // Print the name of the test value
-    printf("The test name associated with this test input is %s\n", Test_Name);
-
-    return 0;
-
+    // Logic behind return value
+    // If Test_Name returns a non-NULL value
+    if(Test_Name != NULL)
+    {
+        printf("The test name associated with your input is: %s", Test_Name);
+    }
+    else
+    {
+        printf("The test input value that was entered does not correspond to any test cases");
+    }
+return 0;
 }
