@@ -1,5 +1,9 @@
+// stdio.h is a header file in C that provides a set of functions for input/output operations
 #include <stdio.h>
-#include <stdint.h>
+// stdint.h is a header that provides integer types with specific widths
+// with specific widths such as uint32_t, int64_t, and uint8_t
+#include <stdint.h> 
+// Custom header file with definitions for called function and structs
 #include "TestID_Lookup.h"
 
 // 1) Define the static Test_Table as an array of TestEntry types
@@ -31,6 +35,7 @@ const char* Get_Test_Name(uint32_t input_value)
     // If there is no matching test case, return an NULL
     return NULL;
 }
+
 
 
 
