@@ -18,6 +18,7 @@ const char* Get_Test_Name(uint32_t input_value)
     int table_size = sizeof(Test_Table)/sizeof(Test_Table[0]);
 
     // If the input is valid, go through the Test_Table matrix values
+    // for(initialize, condition, increment)
     for(int i = 0; i < table_size; i++)
     {
         // If a uint32_t 'value' aligns with the user input
@@ -30,5 +31,6 @@ const char* Get_Test_Name(uint32_t input_value)
     // If there is no matching test case, return an NULL
     return NULL;
 }
+
 
 
