@@ -14,20 +14,21 @@ static TestEntry Test_Table[] =
 // 2) Define the Getter function
 const char* Get_Test_Name(uint32_t input_value)
 {
-    // If the input is invalid, return an error //
-    // scanf("datatype", memory address of variable)
-    if(scanf("%u", &input_value)!= 1)
+    // Find the number of values in the Test_Table matrix
+    int table_size = sizeof(Test_Table)/sizeof(Test_Table[0]);
+
+    // If the input is valid, go through the Test_Table matrix values
+    for(int i = 0; i < table_size; i++)
     {
-        printf("The value you entered is not a uint32_t\n");
-        return 1;
+        // If a uint32_t 'value' aligns with the user input
+        // return the associated string value
+        if(Test_Table[i].value == input_value)   
+        {
+            return Test_Table[i].name;
+        }
     }
-
-    // If the input is valid, go through the TestEntry matrix to see
-    // if there is a matching test case to the uint32_t that was
-    // entered.
-
-
-    // If there is no matching test case, return an error
-
+    // If there is no matching test case, return an NULL
+    return NULL;
 }
+
 
