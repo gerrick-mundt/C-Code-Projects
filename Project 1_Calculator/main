@@ -1,9 +1,0 @@
-#include <stdio.h>
-
-// Calls a function that calculates the result of two inputs 
-// and their mathematical operator and provides an output
-main ()
-{
-  
-}
-
