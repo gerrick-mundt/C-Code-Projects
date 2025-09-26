@@ -1,8 +1,8 @@
-This code directory contains all the source and header files that I have generated for each project listed in the wiki home page (https://github.com/gerrick-mundt/C-Code-Practice/wiki)
-
-Welcome to the C-Code- wiki!
+Welcome to the C-Code- README!
 
 This repository will be used to familiarize myself with the C Coding language in support of my embedded systems projects [baremetal-embedded-systems-C-ATmega328P-Portfolio](https://github.com/gerrick-mundt/baremetal-embedded-systems-C-ATmega328P-Portfolio).
+
+All source and header files for projects done here are can be found in this code directory.
 
 These are 40 projects that I intend to do:
 
