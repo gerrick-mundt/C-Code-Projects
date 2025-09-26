@@ -47,7 +47,7 @@ This project is designed to reinforce basic C programming concepts including inp
 
 ---
 
-#Logic Types Used
+# Logic Types Used
 ## Switch Function
 - Below is a generalization
 ```c
