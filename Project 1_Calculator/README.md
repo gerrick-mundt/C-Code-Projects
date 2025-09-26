@@ -49,7 +49,7 @@ This project is designed to reinforce basic C programming concepts including inp
 
 # Logic Types Used
 ## Switch Function
-- Below is a generalization
+- Below is a generalization of how a switch function is used
 ```c
     switch (value) {
         case 1:
