@@ -52,12 +52,28 @@ This project reinforces concepts such as loops, conditional statements, function
 
 ---
 
-## Code Structure / Headers
-- **Header File:** `guess.h`
+## Logic Types Used
+### if statement
+- An `if` statement executes a block of code only if a specified condition is true. It’s used to make decisions in a program, allowing different code paths based on conditions.
+- Below is an example of an if statement:
+  
 ```c
-#ifndef GUESS_H
-#define GUESS_H
 
-void guess_function(int rand_value);
+    if (value == 1) {
+        printf("Value is 1\n");
+    } else if (value == 2) {
+        printf("Value is 2\n");
+    } else {
+        printf("Value is something else\n");
+    }
+```
+### while loop
+- A `while` loop repeatedly executes a block of code as long as a specified condition is true. It’s useful when the number of iterations is not known in advance and depends on a condition being met during execution.
+- Below is an example of an if statement:
 
-#endif
+```c
+    while (counter < /* some limit */)
+    {
+        printf("Counter is %d\n", counter);
+        counter++;  // update counter to eventually end loop
+    }
