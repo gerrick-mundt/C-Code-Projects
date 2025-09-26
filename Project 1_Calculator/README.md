@@ -47,6 +47,27 @@ This project is designed to reinforce basic C programming concepts including inp
 
 ---
 
+#Logic Types Used
+## Switch Function
+- Below is a generalization
+```c
+    switch (value) {
+        case 1:
+            printf("Case 1\n");
+            break;
+        case 2:
+            printf("Case 2\n");
+            break;
+        case 3:
+            printf("Case 3\n");
+            break;
+        // Add more cases as needed
+        default:
+            printf("Default case\n");
+            break;
+```
+---
+
 ## Code Structure / Headers
 - **Header File:** `calculator.h`
   ```c
@@ -56,8 +77,9 @@ This project is designed to reinforce basic C programming concepts including inp
   int calculator(int a, int b, char op);
 
   #endif
-
+  
 ---
+
 ## Challenges
 - **Reading the operator character correctly**:  
   When reading the operator after entering integers, using `scanf("%c", &op);` would read a leftover newline character from the previous input instead of the actual operator.  
