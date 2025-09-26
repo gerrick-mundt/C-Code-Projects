@@ -55,6 +55,13 @@ This project reinforces concepts such as functions, conditional statements, `swi
 
 ---
 
+## Learnings
+- In a `switch` statement, you write `case` followed by the value you want to match.  
+  You can have multiple `case` labels execute the same code by listing each case consecutively and then specifying the shared behavior once below them.
+- You don’t need to declare a separate variable to return a value from a function.  
+  You can perform calculations directly in the `return` statement and return the result immediately without using a declared variable.
+
+
 ## Code Structure / Headers
 - **Header File:** `temp_converter.h`
 ```c
