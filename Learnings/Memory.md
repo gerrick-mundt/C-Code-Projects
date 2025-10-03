@@ -86,7 +86,7 @@ SP → 0x7FFFFFE8: [20][0][0][0]  ← b
 AFTER func1 returns:
 SP → 0x7FFFFFF0: [10][0][0][0]  ← a
      0x7FFFFFEC: [garbage]  ← b is "gone"
-
+```
 
 ## 4. Pointers
 - A pointer is just a variable that stores an address of another variable
