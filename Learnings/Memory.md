@@ -61,8 +61,3 @@ int *p = &x; // Declare a pointer to x
 > ```c
 > printf("%d\n", *p);
 > ```
-### 4.2. Step-by-step Analogy
-> 1) `x`: a mailbox (or group of mailboxes) storing 10.
-> 2) `&x`: the mailbox number of `x`
-> 3) `p = &x`: a note that says "x is at mailbox 5000"
-> 4) `*p`: you read the value from the mailbox number on the node (value = 10)
