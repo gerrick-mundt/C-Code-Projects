@@ -9,9 +9,11 @@
 - Computers group bits into bytes (8-bits per byte)
 - Bits by themselves do not mean anything until we agree on how to interpret them. If we interpret `01000001` as a number in base-2, it equals 65. However, if we interpret `01000001` as character (text symbol), its `A` ub ASCII. In this case, they are the same bits, however, they hold different meanings depending on the context.
 
-## 3. Memory
-- Think of memory as a long street of mailboxes, where each mailbox stores exactly 1 byte = 8 bits.
-- In this example, each mailbox has a number (address) so we know where it is. Each address holds the contents that are equivilant to a byte (8-bits).
+## 3. Memory in more detail
+### 3.1. RAM
+- Memory is a massive array of bits stored in your RAM (Random Access Memory)
+- Your CPU can read/write any byte address (0 to 8,589,934,591)
+- RAM is volatile - when you turn your computer power, everything disappears
 - In modern computers, each memory address corresponds to 8-bits.
 
 | Address | Contents (bits) | Possible Meaning |
@@ -29,6 +31,61 @@
 | 5001    | 00000000        |
 | 5002    | 00000000        |
 | 5003    | 00001010        |
+
+### 3.2 The Stack - Automatice Memory
+- The stack is a region in memory that grows and shrinks automatically as functions are called and returned
+- Where it lives:
+> In you virtual address space (high addresses)
+> Usually 1-8 MB in size (OS sets a limit)
+> Physically: Scattered across actual RAM chips (OS decides)
+- How it works: The CPU has a special register called the Stack Pointer (SP) that always poits to the "Top" of the stack
+- Here is an example:
+```c
+void func2() {
+    int c = 30;  // Push onto stack
+}
+
+void func1() {
+    int b = 20;  // Push onto stack
+    func2();
+}
+
+int main() {
+    int a = 10;  // Push onto stack
+    func1();
+}
+```
+
+- Stack memory as execution process for the above example
+  
+START (main called):
+SP → 0x7FFFFFF0: [10][0][0][0]  ← a
+     0x7FFFFFEC: [return address]
+
+AFTER func1 called:
+     0x7FFFFFF0: [10][0][0][0]  ← a
+     0x7FFFFFEC: [return address from main]
+SP → 0x7FFFFFE8: [20][0][0][0]  ← b
+     0x7FFFFFE4: [return address]
+
+AFTER func2 called:
+     0x7FFFFFF0: [10][0][0][0]  ← a
+     0x7FFFFFEC: [return address from main]
+     0x7FFFFFE8: [20][0][0][0]  ← b
+     0x7FFFFFE4: [return address from func1]
+SP → 0x7FFFFFE0: [30][0][0][0]  ← c
+     0x7FFFFFDC: [return address]
+
+AFTER func2 returns:
+     0x7FFFFFF0: [10][0][0][0]  ← a
+     0x7FFFFFEC: [return address from main]
+SP → 0x7FFFFFE8: [20][0][0][0]  ← b
+     0x7FFFFFE4: [garbage]  ← c is "gone" (SP moved up)
+
+AFTER func1 returns:
+SP → 0x7FFFFFF0: [10][0][0][0]  ← a
+     0x7FFFFFEC: [garbage]  ← b is "gone"
+
 
 ## 4. Pointers
 - A pointer is just a variable that stores an address of another variable
@@ -52,14 +109,14 @@ int *p = &x; // Declare a pointer to x
 | 6000    | 00010011      | p stores 5000    |
 
 ### 4.1. When to use a pointer?
-- There are 5 main times that pointers are used:
-> 1) Dynamic Memory allocation
->> When you need memory that persists beyond a function (change a global type variable) or whose size isn't known at compile time
-> 3) Modifying function arguments
-> 4) Arrays & strings
-> 5) Data structures'
-> 6) Large data
-> 7) Returning multiple values
+1) Dynamic Memory allocation
+> When you need memory that persists beyond a function (e.g. function changes a global variable) or whose size isn't known at compile time
+2) Modifying function arguments
+> 
+3) Arrays & strings
+4) Data structures'
+5) Large data
+6) Returning multiple values
 
 ### 4.2. How to use a pointer?
 - There are two main things that you can do with a pointer:
