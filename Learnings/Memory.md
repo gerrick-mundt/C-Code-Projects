@@ -41,7 +41,7 @@ int *p = &x; // Declare a pointer to x
 - `x` is a variable stored in memeory (say addresses 5000-5003)
 - `&x` = the address of `x` (5000)
 - `p` is a pointer (it stores the number 5000)
-- So memory looks like this:
+- So memory might look like this:
 
 | Address | Contents      | Meaning           |
 |---------|---------------|-----------------|
@@ -50,5 +50,16 @@ int *p = &x; // Declare a pointer to x
 | 5002    | 00000000      | x, byte 3        |
 | 5003    | 00001010      | x, byte 4 (10)   |
 | 6000    | 00010011      | p stores 5000    |
+
+### 4.1 How to use a pointer
+- There are two main things that you can do with a pointer:
+> 1) Find the address of a variable (`&` operator)
+> ```c
+> printf("%p\n", &x);
+> ```
+> 2) Access the value stored at that address (`*` operator)
+> ```c
+> printf("%d\n", *p);
+> ```
 
 
