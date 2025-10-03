@@ -58,6 +58,7 @@ int main() {
 
 - Stack memory as execution process for the above example
   
+```
 START (main called):
 SP → 0x7FFFFFF0: [10][0][0][0]  ← a
      0x7FFFFFEC: [return address]
