@@ -61,5 +61,31 @@ int *p = &x; // Declare a pointer to x
 > ```c
 > printf("%d\n", *p);
 > ```
+### 4.2 Step-by-step Analogy
+> 1) `x`: a mailbox (or group of mailboxes) storing 10.
+> 2) `&x`: the mailbox number of `x`
+> 3) `p = &x`: a note that says "x is at mailbox 5000"
+> 4) `*p`: you read the value from the mailbox number on the node (value = 10)
 
+### 4.3 What types can pointers point to
+- Pointers can point to any type
+- The type always tells the compiler how many bytes to read
+- Example:
 
+### Pointer Example in Memory
+
+Memory addresses:
+
+| Address | Contents      | Meaning                 |
+|---------|---------------|------------------------|
+| 5000    | 00000000      | x, byte 1             |
+| 5001    | 00000000      | x, byte 2             |
+| 5002    | 00000000      | x, byte 3             |
+| 5003    | 00001010      | x, byte 4 (value 10)  |
+| 6000    | 00010011      | p stores address of x  |
+
+**Explanation:**
+
+- `x` occupies addresses 5000–5003 (4 bytes for an int).  
+- `p` stores the address of `x` (5000 in this example).  
+- `*p` accesses the value at the address stored in `p` → 10.
