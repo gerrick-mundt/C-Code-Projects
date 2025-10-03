@@ -51,7 +51,7 @@ int *p = &x; // Declare a pointer to x
 | 5003    | 00001010      | x, byte 4 (10)   |
 | 6000    | 00010011      | p stores 5000    |
 
-### 4.1 How to use a pointer
+### 4.1. How to use a pointer
 - There are two main things that you can do with a pointer:
 > 1) Find the address of a variable (`&` operator)
 > ```c
@@ -61,13 +61,13 @@ int *p = &x; // Declare a pointer to x
 > ```c
 > printf("%d\n", *p);
 > ```
-### 4.2 Step-by-step Analogy
+### 4.2. Step-by-step Analogy
 > 1) `x`: a mailbox (or group of mailboxes) storing 10.
 > 2) `&x`: the mailbox number of `x`
 > 3) `p = &x`: a note that says "x is at mailbox 5000"
 > 4) `*p`: you read the value from the mailbox number on the node (value = 10)
 
-### 4.3 What types can pointers point to
+### 4.3. What types can pointers point to
 - Pointers can point to any type
 - The type always tells the compiler how many bytes to read
 - Example:
