@@ -51,7 +51,17 @@ int *p = &x; // Declare a pointer to x
 | 5003    | 00001010      | x, byte 4 (10)   |
 | 6000    | 00010011      | p stores 5000    |
 
-### 4.1. How to use a pointer
+### 4.1. When to use a pointer?
+- There are 5 main times that pointers are used:
+> 1) Dynamic Memory allocation
+>> When you need memory that persists beyond a function (change a global type variable) or whose size isn't known at compile time
+> 3) Modifying function arguments
+> 4) Arrays & strings
+> 5) Data structures'
+> 6) Large data
+> 7) Returning multiple values
+
+### 4.2. How to use a pointer?
 - There are two main things that you can do with a pointer:
 > 1) Find the address of a variable (`&` operator)
 > ```c
