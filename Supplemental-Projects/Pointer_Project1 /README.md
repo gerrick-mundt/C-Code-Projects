@@ -11,7 +11,7 @@ int main ()
     printf("The value of x = %i \n", x);
 
     // Ask for user input
-    printf("Enter the new value you want x to have: \n");
+    printf("Enter the new value you want x to have: ");
 
     // Take and store the user input
     scanf(" %i", &x);
@@ -25,7 +25,6 @@ int main ()
 # Terminal Example
 ```c
 The value of x = 10 
-Enter the new value you want x to have: 
-16
+Enter the new value you want x to have: 16
 The new value of x = 16
 ```
