@@ -1,7 +1,7 @@
 # Pointers
 ## 1. What is a pointer?
-- A pointer is just a variable that stores a memory address of another variable
-- Pointers can be thought of like a note that tells the compiler to "look in mailbox #x"
+- **pointer** in C is a variable that **stores the memory address** of another variable.
+- Instead of holding a value directly (like `10` or `'A'`), a pointer holds the **location in memory** where that value is stored.
 
 ## 2. Pointer Example
 ```c
