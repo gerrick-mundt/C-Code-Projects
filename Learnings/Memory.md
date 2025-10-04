@@ -9,8 +9,7 @@
 - Computers group bits into bytes (8-bits per byte)
 - Bits by themselves do not mean anything until we agree on how to interpret them. If we interpret `01000001` as a number in base-2, it equals 65. However, if we interpret `01000001` as character (text symbol), its `A` ub ASCII. In this case, they are the same bits, however, they hold different meanings depending on the context.
 
-## 3. Memory in more detail
-### 3.1. RAM
+## 3. RAM
 - Memory is a massive array of bits stored in your RAM (Random Access Memory)
 - Your CPU can read/write any byte address (0 to 8,589,934,591)
 - RAM is volatile - when you turn your computer power, everything disappears
@@ -32,7 +31,7 @@
 | 5002    | 00000000        |
 | 5003    | 00001010        |
 
-### 3.2 The Stack - Temporary storage
+## 4. The Stack - Temporary storage
 - The stack is a region in memory that grows and shrinks automatically as functions are called and returned
 - Where it lives:
 > In you virtual address space (high addresses)
@@ -87,38 +86,5 @@ AFTER func1 returns:
 SP → 0x7FFFFFF0: [10][0][0][0]  ← a
      0x7FFFFFEC: [garbage]  ← b is "gone"
 ```
-### 3.3 The Heap - Perminant Storage
+## 5. The Heap - Perminant Storage
 - 
-
-## 4. Pointers
-- A pointer is just a variable that stores a memory address of another variable
-- Pointers can be thought of like a note that tells the compiler to "look in mailbox #x"
-- Example: 
-```c
-int x = 10;  // Declare an integer variable
-int *p = &x; // Declare a pointer to x
-```
-- `x` is a variable stored in memeory (say addresses 5000-5003)
-- `&x` = the address of `x` (5000)
-- `p` is a pointer (it stores the number 5000)
-- So memory might look like this:
-
-| Address | Contents      | Meaning           |
-|---------|---------------|-----------------|
-| 5000    | 00000000      | x, byte 1        |
-| 5001    | 00000000      | x, byte 2        |
-| 5002    | 00000000      | x, byte 3        |
-| 5003    | 00001010      | x, byte 4 (10)   |
-| 6000    | 00010011      | p stores 5000    |
-
-
-### 4.2. How to use a pointer?
-- There are two main things that you can do with a pointer:
-> 1) Find the address of a variable (`&` operator)
-> ```c
-> printf("%p\n", &x);
-> ```
-> 2) Access the value stored at that address (`*` operator)
-> ```c
-> printf("%d\n", *p);
-> ```
