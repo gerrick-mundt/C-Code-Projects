@@ -74,6 +74,7 @@ int main() {
 ```
 ### 3.4. Pointers and Arrays
 - An array's name is actually a pointer to its first element
+```c
 #include <stdio.h>
 
 int main() {
@@ -86,9 +87,11 @@ int main() {
 
     return 0;
 }
-
+```
 ### 3.5. Dynamic Memory (Heap)
 - Using pointers with `malloc` to allocate memory
+
+```c
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -100,7 +103,7 @@ int main() {
     free(p);   // release memory
     return 0;
 }
-
+```
 ## Summary
 - `&`: Get the address of a variable
 - `*`: Dereference a pointer (get/set the value at that memory address)
