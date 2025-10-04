@@ -32,7 +32,7 @@
 | 5002    | 00000000        |
 | 5003    | 00001010        |
 
-### 3.2 The Stack - Automatice Memory
+### 3.2 The Stack - Temporary storage
 - The stack is a region in memory that grows and shrinks automatically as functions are called and returned
 - Where it lives:
 > In you virtual address space (high addresses)
@@ -56,7 +56,7 @@ int main() {
 }
 ```
 
-- Stack memory as execution process for the above example
+- Stack memory as execution process for the above example:
   
 ```
 START (main called):
@@ -87,9 +87,11 @@ AFTER func1 returns:
 SP → 0x7FFFFFF0: [10][0][0][0]  ← a
      0x7FFFFFEC: [garbage]  ← b is "gone"
 ```
+### 3.3 The Heap - Perminant Storage
+- 
 
 ## 4. Pointers
-- A pointer is just a variable that stores an address of another variable
+- A pointer is just a variable that stores a memory address of another variable
 - Pointers can be thought of like a note that tells the compiler to "look in mailbox #x"
 - Example: 
 ```c
@@ -109,15 +111,6 @@ int *p = &x; // Declare a pointer to x
 | 5003    | 00001010      | x, byte 4 (10)   |
 | 6000    | 00010011      | p stores 5000    |
 
-### 4.1. When to use a pointer?
-1) Dynamic Memory allocation
-> When you need memory that persists beyond a function (e.g. function changes a global variable) or whose size isn't known at compile time
-2) Modifying function arguments
-> 
-3) Arrays & strings
-4) Data structures'
-5) Large data
-6) Returning multiple values
 
 ### 4.2. How to use a pointer?
 - There are two main things that you can do with a pointer:
