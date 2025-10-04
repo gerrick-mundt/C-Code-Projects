@@ -27,5 +27,5 @@ int main ()
 The value of x = 10 
 Enter the new value you want x to have: 
 16
-The new value of x = 16%
+The new value of x = 16
 ```
