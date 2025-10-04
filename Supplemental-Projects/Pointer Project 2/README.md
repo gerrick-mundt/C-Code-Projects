@@ -1,5 +1,5 @@
 # Purpose
-The purpose of this project was to gain familiarity with accessing the **memory locations** of different variable types, specifically `char` and `int`.
+The purpose of this project was to gain familiarity with accessing the **memory addresses** of different variable types, specifically `char` and `int`.
 
 # Code
 ```c
