@@ -32,3 +32,5 @@ int *p = &x; // Declare a pointer to x
 > ```c
 > printf("%d\n", *p);
 > ```
+
+## 4. When to use a pointer?
