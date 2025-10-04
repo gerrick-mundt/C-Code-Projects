@@ -1,8 +1,9 @@
-## What is a pointer?
+# Pointers
+## 1. What is a pointer?
 - A pointer is just a variable that stores a memory address of another variable
 - Pointers can be thought of like a note that tells the compiler to "look in mailbox #x"
 
-## Pointer Example
+## 2. Pointer Example
 ```c
 int x = 10;  // Declare an integer variable
 int *p = &x; // Declare a pointer to x
@@ -21,7 +22,7 @@ int *p = &x; // Declare a pointer to x
 | 6000    | 00010011      | p stores 5000    |
 
 
-## How to use a pointer?
+## 3. How to use a pointer?
 - There are two main things that you can do with a pointer:
 > 1) Find the address of a variable (`&` operator)
 > ```c
