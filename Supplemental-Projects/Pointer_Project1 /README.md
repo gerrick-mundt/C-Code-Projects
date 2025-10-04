@@ -1,9 +1,11 @@
 # Purpose
-- In this supplemental project, I wrote a program that changes a variable using its memory address via the standard library function `scanf`.  
+### Purpose
 
-- In `scanf`, the `&x` provides the function with the **address of the local `x` variable** (unless a global variable is explicitly specified). `scanf` then writes the user’s input directly into that memory location, updating the value of `x`.  
+The purpose of this supplemental project was to practice working with **memory addresses** in C. I wrote a program that changes a variable using its memory address via the standard library function `scanf`.  
 
-- I completed this exercise to become familiar with using the **variable address operator (`&`)** in C.
+In `scanf`, the `&x` provides the function with the **address of the local `x` variable** (unless a global variable is explicitly specified). The function then writes the user’s input directly into that memory location, updating the value of `x`.  
+
+This exercise helped me become familiar with using the **variable address operator (`&`)** and understanding how pointers interact with memory in C.
 
 # Code
 ```c
