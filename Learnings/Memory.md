@@ -45,7 +45,6 @@ When your program runs, it gets a virtual address space divided into different s
 When you write a C program and run it, different parts of memory are used depending on what your code does.
 
 ### The process:
-
 Step 1: You write code
 ```c
 int global_x = 100;        // Goes in Data Segment
