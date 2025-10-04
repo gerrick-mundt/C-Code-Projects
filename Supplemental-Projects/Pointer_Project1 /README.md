@@ -1,3 +1,6 @@
+# Purpose
+In this supplemental project, I wrote a program that changes a variable using its memory address via the standard library function `scanf`.  In `scanf`, the `&x` gives the function the **address of the local `x` variable** (unless you explicitly refer to a global variable). `scanf` then writes the user’s input directly into that memory location, updating the value of `x`.
+
 # Code
 ```c
 #include <stdio.h>
