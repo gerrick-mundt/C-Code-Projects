@@ -40,6 +40,25 @@ When your program runs, it gets a virtual address space divided into different s
 | Text Segment | 0x0000000100000000 | 0x0000000100001FFF | Your compiled program code (instructions) |
 | Reserved Low Memory | 0x0000000000000000 | 0x00000000FFFFFFFF | Protected/reserved (helps catch null pointer errors) |
 
+## Flow of Decisions (How the compiler/OS decides)
+
+1. **Is it code (functions, instructions)?**
+   - ✅ Goes into **Text Segment**.
+
+2. **Is it a global or `static` variable?**
+   - ✅ If **initialized to non-zero constant** → **Data Segment**.  
+   - ✅ If **uninitialized or initialized to 0** → **BSS Segment**.
+
+3. **Is it a local variable inside a function (not `static`)?**
+   - ✅ Goes onto the **Stack**, created at function call.
+
+4. **Is it allocated with `malloc`, `calloc`, or `realloc`?**
+   - ✅ Goes onto the **Heap**, at runtime.
+
+5. **Is it a constant string literal?**
+   - ✅ Compiler usually places it in **Text Segment** (read-only).  
+   - Example: `"Hello World"` in `printf`.
+
 ## 5. What happens when you write and execute a program
 
 When you write a C program and run it, different parts of memory are used depending on what your code does.
