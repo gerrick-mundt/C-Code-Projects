@@ -1,6 +1,6 @@
 # stdio.h
 ## What is it?
-stdio.h is a header file that provides functions for reading and writing data (input/output opertions)
+`stdio.h` is a header file that provides functions for reading and writing data (input/output opertions)
 ## Common functions
 ### printf
 - This function outputs formatted text to the console.
