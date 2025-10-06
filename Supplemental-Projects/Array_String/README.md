@@ -12,34 +12,20 @@ This program was written to gain familiarity with writing strings to arrays. Thi
 
 ### Explanation of use in code
 ```c
-fgets(tasks[i], sizeof(tasks[i]), stdin);
+fgets(array[i], buffer, stdin);
 ```
-
-This line reads **one line of input from the keyboard** and stores it into the `i`-th row of the 2D array `tasks`.
-
-### 1. `tasks[i]` → the buffer
-- `tasks` is a **2D char array**, e.g., `char tasks[5][50];`.
-- `tasks[i]` refers to the **i-th row**, which is itself a **char array** that can store one string (up to 49 characters plus the null terminator `\0`).
-- In C, arrays decay into pointers, so `tasks[i]` is effectively a **pointer to the first character** of that row.
-- This is where `fgets` will **store the input characters**.
-
-### 2. `sizeof(tasks[i])` → maximum number of characters
-- `sizeof(tasks[i])` gives the **size of the i-th row in bytes**, which is `50` in this case.
-- Tells `fgets` the **maximum number of characters it can safely read**, including space for the **null terminator `\0`**.
-- Prevents **buffer overflow**, which could crash your program.
-
-### 3. `stdin` → the input source
-- `stdin` stands for **standard input**, usually the keyboard.
-- It’s a predefined input stream in C.
-- Could be replaced with a file pointer if reading from a file:
-
-```c
-FILE *file = fopen("tasks.txt", "r");
-fgets(tasks[i], sizeof(tasks[i]), file);
-```
+1. `array[i]` → Pointer to the memory location where the first string will be stored
+2. `buffer` → the maximum number of characters to read, including the null terminator (\n)
+3. `stdin` → the input source, in this case the users keyboard
 
 ## strcspn
 `strcspn` - This function returns the number of characters from the start of a string until it encounters any character for the user defined "undesirable set" (called the reject set). This is useful for replacing unwanted characters (such as `\n`) that cause issues when working with strings in C.
+
+### Explanation of use in code
+```c
+array[i][strcspn(array[i], "\n")] = '\0';
+```
+- Accesses the position in the 2D array where the first occurence of the rejected character (`\n`) is found and replaces it with the null terminator (`\0`), effectively trimming the function at that point.
 
 # Code
 ```c
