@@ -39,7 +39,7 @@ fgets(tasks[i], sizeof(tasks[i]), file);
 ```
 
 ## strcspn
-`strcspn` - 
+`strcspn` - This function returns the number of characters from the start of a string until it encounters any character for the user defined "undesirable set" (called the reject set). This is useful for replacing unwanted characters (such as `\n`) that cause issues when working with strings in C.
 
 # Code
 ```c
