@@ -3,7 +3,7 @@ This program was written to gain familiarity with writing strings to arrays. Thi
 
 # Called Functions
 ## fgets
-- `fgets` is a function from **`<stdio.h>`** that reads a line of input from a stream (keyboard via `stdin` or a file) and stores it in a **char array**.  
+- `fgets` is a function from **`<stdio.h>`** that reads a line of input from a stream (keyboard via `stdin`) and stores it in a **char array**.  
 - In a **2D char array**, each row stores one string, and the columns store the individual characters of that string.  
 - **Inputs (arguments) of `fgets`:**  
   1. **Buffer (char array):** Where the input will be stored, including space for the **null terminator `\0`**  
