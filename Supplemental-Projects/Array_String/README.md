@@ -26,7 +26,17 @@ fgets(array[i], buffer, stdin);
 array[i][strcspn(array[i], "\n")] = '\0';
 ```
 - Accesses the position in the 2D array where the first occurence of the rejected character (`\n`) is found and replaces it with the null terminator (`\0`), effectively trimming the function at that point.
+- Before code was implemented this would have been:
 
+| Index      | 0   | 1   | 2   | 3   | 4   | 5    | 6    |
+|------------|-----|-----|-----|-----|-----|------|------|
+| Character  | 'h' | 'e' | 'l' | 'l' | 'o' | '\n' | '\0' |
+
+- After code was implemented this is:
+
+| Index      | 0   | 1   | 2   | 3   | 4   | 5    | 6    |
+|------------|-----|-----|-----|-----|-----|------|------|
+| Character  | 'h' | 'e' | 'l' | 'l' | 'o' | '\0' | '\0' |
 
 # Code
 ```c
