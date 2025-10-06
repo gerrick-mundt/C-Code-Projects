@@ -44,25 +44,41 @@ fgets(tasks[i], sizeof(tasks[i]), file);
 # Code
 ```c
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 
-int main() {
-    int numTasks = 5;
-    char tasks[numTasks][50];  // 5 tasks, each up to 49 chars
+int main () 
+{
+    // Define variables
+    int i, j, string_total = 5, buffer = 50;
 
-    // Input tasks
-    for (int i = 0; i < numTasks; i++) {
-        printf("Enter task %d: ", i + 1);
-        fgets(tasks[i], sizeof(tasks[i]), stdin);
+    // Define a character array
+    // means that array is a 2D array (array of arrays) of chars
+    char array[string_total][buffer];
 
-        // Remove the newline character added by fgets
-        tasks[i][strcspn(tasks[i], "\n")] = '\0';
+    // Input values into array
+    for(i = 0; i < string_total; i++)
+    {
+        // Ask for a to-do string input
+        printf("Please provide user to-do list string item: ");
+
+        // Get line straight from user keyboard
+        fgets(array[i], buffer, stdin);
+
+        // Get rid of errant \n
+        array[i][strcspn(array[i], "\n")] = '\0';
+
+        // Generate a space 
+        printf("\n");
     }
 
-    // Print tasks
-    printf("\nYour To-Do List:\n");
-    for (int i = 0; i < numTasks; i++) {
-        printf("%d. %s\n", i + 1, tasks[i]);
+    // Print input list statement
+    printf("Here is the list that you input: \n");
+
+    // Print all strings that were input by the user
+    for(j = 0; j < string_total; j++)
+    {
+        printf("String %d: %s\n",j, array[j]);
     }
 
     return 0;
