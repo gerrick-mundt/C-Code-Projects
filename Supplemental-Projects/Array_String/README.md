@@ -19,7 +19,7 @@ fgets(array[i], buffer, stdin);
 3. `stdin` → the input source, in this case the users keyboard
 
 ## strcspn
-`strcspn` - This function returns the number of characters from the start of a string until it encounters any character for the user defined "undesirable set" (called the reject set). This is useful for replacing unwanted characters (such as `\n`) that cause issues when working with strings in C.
+`strcspn` — This function, declared in the <string.h> library, returns the number of characters from the beginning of a string up to (but not including) the first occurrence of any character from a specified set of unwanted characters (the reject set). It’s commonly used to find and remove problematic characters like \n from strings in C.
 
 ### Explanation of use in code
 ```c
