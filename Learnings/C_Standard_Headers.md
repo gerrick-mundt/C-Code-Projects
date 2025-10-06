@@ -62,7 +62,7 @@ Provides functions for C-style string and memory operations.
 | `memset()`    | Fill memory with a value               | Pointer, value, size                   | Pointer to memory block     |
 | `strchr()`    | Find first occurrence of char          | String, character                      | Pointer to character found  |
 | `strstr()`    | Find substring                         | String, substring                      | Pointer to substring found  |
-| `strcspn()`   | Get length of initial segment without characters from reject set | String, reject set characters         | Length (`size_t`) up to first reject character |
+| `strcspn()`   | It tells you the length of the initial segment of the string that does NOT contain any characters from the reject set. | String, reject set characters         | Length (`size_t`) up to first reject character |
 
 ---
 
