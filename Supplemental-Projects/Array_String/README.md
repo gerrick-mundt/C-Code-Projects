@@ -6,9 +6,9 @@ This program was written to gain familiarity with writing strings to arrays. Thi
 - `fgets` is a function from **`<stdio.h>`** that reads a line of input from a stream (keyboard via `stdin`) and stores it in a **char array**.  
 - In a **2D char array**, each row stores one string, and the columns store the individual characters of that string.  
 - **Inputs (arguments) of `fgets`:**  
-  1. **Buffer (char array):** Where the input will be stored, including space for the **null terminator `\0`**  
-  2. **Maximum number of characters:** How many characters to read, **including the null terminator**  
-  3. **Input source (`FILE*` stream):** Where the string comes from (`stdin` for keyboard, or a file pointer for a file)
+> 1. **Buffer (char array):** Where the input will be stored, including space for the **null terminator `\0`**  
+> 2. **Maximum number of characters:** How many characters to read, **including the null terminator**  
+> 3. **Input source (`FILE*` stream):** Where the string comes from (`stdin` for keyboard, or a file pointer for a file)
 
 
 ## strcspn
