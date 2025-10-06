@@ -10,11 +10,12 @@ This program was written to gain familiarity with writing strings to arrays. Thi
 > 2. **Maximum number of characters:** How many characters to read, **including the null terminator**  
 > 3. **Input source (`FILE*` stream):** Where the string comes from (`stdin` for keyboard, or a file pointer for a file)
 
-### Explanation of `fgets(tasks[i], sizeof(tasks[i]), stdin);`
+### Explanation of use in code
+```c
+fgets(tasks[i], sizeof(tasks[i]), stdin);
+```
 
 This line reads **one line of input from the keyboard** and stores it into the `i`-th row of the 2D array `tasks`.
-
----
 
 ### 1. `tasks[i]` → the buffer
 - `tasks` is a **2D char array**, e.g., `char tasks[5][50];`.
@@ -22,14 +23,10 @@ This line reads **one line of input from the keyboard** and stores it into the `
 - In C, arrays decay into pointers, so `tasks[i]` is effectively a **pointer to the first character** of that row.
 - This is where `fgets` will **store the input characters**.
 
----
-
 ### 2. `sizeof(tasks[i])` → maximum number of characters
 - `sizeof(tasks[i])` gives the **size of the i-th row in bytes**, which is `50` in this case.
 - Tells `fgets` the **maximum number of characters it can safely read**, including space for the **null terminator `\0`**.
 - Prevents **buffer overflow**, which could crash your program.
-
----
 
 ### 3. `stdin` → the input source
 - `stdin` stands for **standard input**, usually the keyboard.
