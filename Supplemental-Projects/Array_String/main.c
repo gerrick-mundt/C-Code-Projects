@@ -5,39 +5,34 @@
 int main () 
 {
     // Define variables
-    int i, j, string_total = 5, buffer = 50;
+    int max_length = 100; // Maximum number of list items
+    int max_chars = 50; // Maximum characters per list item
+    int counter_1 = 0; // Input counter
+    int counter_2 = 0; // Print counter
 
-    // Define a character array
-    // means that array is a 2D array (array of arrays) of chars
-    char array[string_total][buffer];
-
-    // Input values into array
-    for(i = 0; i < string_total; i++)
+    // Define to-do list array
+    char array[max_length][max_chars];
+    
+    // Take user input loop
+    while(counter_1 < max_length)
     {
-        // ask for a to-do string input
-        printf("Please provide user to-do list string item: ");
+        // Request user input
+        printf("Item %d", );
 
-        // Get line straight from user keyboard
-        fgets(array[i], buffer, stdin);
+        // Case where user inputs a value
+        if(fgets(array[counter_1], max_chars, stdin) == NULL)
+        {
+            break;
+        }
 
-        // Get rid of the new line that can issues (remove it from the character string)
-        // Accessing array[i][index] lets you read or write the character position at "index"
-        // So the portion: array[i][strcspn(array[i], "\n")], represents a single character.
-        // The \0 represents the character value you are assigning to it (null terminator)
-        array[i][strcspn(array[i], "\n")] = '\0';
-
-        // Generate a space 
-        printf("\n");
+        // Case where user inputs 0
+        else
+        {
+            ;
+        }
     }
 
-    // Print input list statement
-    printf("Here is the list that you input: \n");
-
-    // Print all strings that were input by the user
-    for(j = 0; j < string_total; j++)
-    {
-        printf("String %d: %s\n",j, array[j]);
-    }
+    // When use input is complete, print list
 
     return 0;
 }
