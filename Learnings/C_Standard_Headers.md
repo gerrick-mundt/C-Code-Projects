@@ -12,6 +12,7 @@ Provides functions for console and file input/output.
 |---------------|----------------------------------------|----------------------------------------------------|----------------------------|
 | `printf()`    | Print formatted output to console      | Format string, optional variables                  | Number of characters printed |
 | `scanf()`     | Read formatted input from console      | Format string, pointers to variables               | Number of items read       |
+| `fgets()`     | Read a line/string from input safely   | Buffer (char*), buffer size, input stream (`FILE*`) | Buffer pointer or `NULL` on error |
 | `fopen()`     | Open a file                            | File name, mode (`"r"`, `"w"`, etc.)               | File pointer (`FILE *`)    |
 | `fclose()`    | Close a file                           | File pointer                                       | `0` on success, `EOF` on error |
 | `fread()`     | Read binary data from a file           | Pointer to buffer, size, count, file pointer       | Number of items read       |
