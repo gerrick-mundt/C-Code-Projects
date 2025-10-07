@@ -10,7 +10,7 @@ This program takes user input as a string and examines its contents. If the inpu
     - nonzero → the character **is** a digit  
   - **Note:** The actual nonzero number is not important — it just means "true".
 
-- `atoi`: 
+- `atoi`: This function takes a string and converts it into an integer. If the string is "123", the function goes character by character until all digit characters at the start of the string are converted to their corresponding integer values. If the string does not start with digits, it returns 0.
 
 # Code
 ```c
