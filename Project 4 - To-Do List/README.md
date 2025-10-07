@@ -39,9 +39,9 @@ The memory layout would look like this:
 ### stdio.h Functions
 - **`fgets`**: Reads a line of text from an input stream into a character array (buffer).
   
-> Input 1 (`char *str`): Pointer to the first element of the character array where the input will be stored.
-> Input 2 (`int n`): Maximum number of characters to read, including the null terminator `\0`.
-> Input 3 (`FILE *stream`): The input stream to read from, usually `stdin` for keyboard input.
+- Input 1 (`char *str`): Pointer to the first element of the character array where the input will be stored.
+- Input 2 (`int n`): Maximum number of characters to read, including the null terminator `\0`.
+- Input 3 (`FILE *stream`): The input stream to read from, usually `stdin` for keyboard input.
 
 ### string.h Functions
 
