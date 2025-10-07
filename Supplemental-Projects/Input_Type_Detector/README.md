@@ -59,8 +59,15 @@ int main(void)
     }
 }
 ```
-# Terminal Example
+# Terminal Examples
+## Integer Input
 ```c
 Input either a string or an integer: 3333
 The integer you input is: 3333
+```
+
+## String Input
+```c
+Input either a string or an integer: ferv54g45
+The string you input is: ferv54g45
 ```
