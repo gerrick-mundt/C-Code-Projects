@@ -12,7 +12,7 @@ These are 40 projects that I intend to do:
 |    Yes    | | 2. Number Guessing Game | User guesses a number | Feedback: "Too high/low" | Random number generated; user guesses until correct. |
 |    Yes    | | 3. Temperature Converter | Temperature in °C or °F | Converted temperature | Converts between Celsius and Fahrenheit. |
 |    Yes   | | 4. Simple To-Do List | Task names | List of tasks | User adds tasks; program displays the list. |
-|           | | 5. Multiplication Table Generator | Number | Multiplication table for that number | Prints multiplication table from 1 to 12. |
+|    Yes   | | 5. Multiplication Table Generator | Number | Multiplication table for that number | Prints multiplication table from 1 to 12. |
 |           | | 6. Palindrome Checker | String or number | True/False | Checks if input reads the same forwards and backwards. |
 |           | | 7. Prime Number Tester | Number | True/False | Determines if the number is prime. |
 |           | | 8. Simple Interest Calculator | Principal, rate, time | Interest amount | Computes simple interest using the formula I = P * R * T. |
