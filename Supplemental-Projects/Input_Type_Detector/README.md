@@ -18,43 +18,45 @@ This program takes user input as a string and examines its contents. If the inpu
 
 int main(void)
 {
-    char input[100]; // declare input buffer
-    int isNumber = 1; // Assume number until proven otherwise
+    // Generate a single string buffer that holds user input
+    char buffer[100];
 
-    // Request user input
-    printf("Enter something (string or integer): ");
+    // Declare variable
+    int isNumber = 1; // Assume that the input value is an integer
 
-    // Store user input
-    fgets(input, sizeof(input), stdin);
+    // Ask for user input
+    printf("Input either a string or an integer: ");
 
-    // Remove trailing newline character to avoid fgets errors
-    input[strcspn(input, "\n")] = '\0';
+    // Take input stream and store in buffer
+    fgets(buffer, sizeof(buffer), stdin);
 
-    // Check if all characters are digits
-    for(int i = 0; i < strlen(input); i++)
+    // Remove newline that is auto created by fgets
+    buffer[strcspn(buffer, "\n")] = '\0';
+
+    // Check each character to see if the string is all digits
+    for(int i = 0; i < strlen(buffer); i++)
     {
-        // Case where not all characters are digits
-        // Use isdigit function to see if the character is a digit
-        if(isdigit(input[i]) == 0)
+        // Case for if character is not a digit
+        if(isdigit(buffer[i]) == 0)
         {
             isNumber = 0;
             break;
         }
     }
 
-    // If all the characters are digits, convert the input to an integer
-    if(isNumber == 1)
+    // Print the user generated string or integer
+    // Case 1: 
+    if(isNumber == 0)
     {
-        int value = atoi(input);
-        printf("You entered an integer: %d\n", value);
+        printf("The string you input is: %s", buffer);
     }
 
-    // If not all characters are integers, print user input string
+    // Case 2: 
     else
     {
-        printf("You entered the following string: %s", input);
+        int value = atoi(buffer);
+        printf("The integer you input is: %d", value);
     }
-
-    return 0;
 }
 ```
+# Command Line
