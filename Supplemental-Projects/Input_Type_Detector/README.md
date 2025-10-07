@@ -3,14 +3,11 @@ This program takes user input as a string and examines its contents. If the inpu
 
 # Called Functions
 
-- `isdigit`: Checks if a single character is a digit (0 through 9).  
-  - **Input:** a character (like `'5'` or `'a'`)  
-  - **Output:** an integer that tells you whether the character is a digit:  
-    - `0` → the character is **not** a digit  
-    - nonzero → the character **is** a digit  
-  - **Note:** The actual nonzero number is not important — it just means "true".
+| Function | Header | Description | Input | Output |
+|----------|--------|-------------|-------|--------|
+| `atoi`  | `<stdlib.h>` | Converts a string of characters that represents a number into an integer. Reads the string character by character, converting digits at the start into an integer until it reaches a non-digit character or the end of the string. | A string (char array) representing a number, e.g., `"123"` or `"-45"`. | An integer corresponding to the numeric value in the string. Returns `0` if the string does not start with a digit. |
+| `isdigit` | `<ctype.h>` | Checks whether a single character is a decimal digit (`'0'`–`'9'`). | A single character (passed as an int, often a `char`). | Returns `0` if the character is not a digit, or a nonzero value if it is a digit. The exact nonzero value is implementation-defined. |
 
-- `atoi`: This function takes a string and converts it into an integer. If the string is "123", the function goes character by character until all digit characters at the start of the string are converted to their corresponding integer values. If the string does not start with digits, it returns 0.
 
 # Code
 ```c
