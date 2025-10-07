@@ -59,4 +59,8 @@ int main(void)
     }
 }
 ```
-# Command Line
+# Terminal Example
+```c
+Input either a string or an integer: 3333
+The integer you input is: 3333
+```
