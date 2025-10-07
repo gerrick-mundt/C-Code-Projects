@@ -44,6 +44,15 @@ The memory layout would look like this:
 > 3. (`FILE *stream`): The input stream to read from, usually `stdin` for keyboard input.
 
 ### string.h Functions
+- **`strlen`**: Returns the length of a string (number of characters before the null terminator (\0)
+> 1. (`str`): Pointer to the null-terminated string whose length you want to measure
 
+- **`strcmp`**: Compares two strings
+> 1. (`str 1`): Pointer to the first null terminated string
+> 2. (`str 2`): Pointer to the first null terminated string
+
+- **`strcspn`**: Returns the index of the first occurrence of any character from a set of characters in a string
+> 1. (`str 1`): Pointer to the string being scanned
+> 2. (`str 2`): Pointer to the set of characters to search for
 
 
