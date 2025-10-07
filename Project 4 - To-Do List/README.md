@@ -44,15 +44,19 @@ The memory layout would look like this:
 > 3. (`FILE *stream`): The input stream to read from, usually `stdin` for keyboard input.
 
 ### string.h Functions
-- **`strlen`**: Returns the length of a string (number of characters before the null terminator (\0)
+- **`strlen`**: String Length. Returns the length of a string (number of characters before the null terminator (\0)
 > 1. (`str`): Pointer to the null-terminated string whose length you want to measure
 
-- **`strcmp`**: Compares two strings
+- **`strcmp`**: String Compare. Compares two strings
 > 1. (`str 1`): Pointer to the first null terminated string
 > 2. (`str 2`): Pointer to the first null terminated string
 
-- **`strcspn`**: Returns the index of the first occurrence of any character from a set of characters in a string
+- **`strcspn`**: Sting Complement Span. This returns the index of the first occurrence of any character from a set of characters in a string
 > 1. (`str 1`): Pointer to the string being scanned
 > 2. (`str 2`): Pointer to the set of characters to search for
 
-
+## Learnings
+- You can use `fgets` to take string inputs from the users keyboard and store it in a buffer (block of memory for characters).
+- When you use `fgets`, it automatically includes a newline character (`\n`) that the user enters when they press ENTER. To remove this new line character, you can use `strcspn`, which finds the `\n` and replaces it with the NULL terminator (`\0`). If you do not remove the newline, you may see unexpected behavior when printing or comparing strings.
+- To get the length of a string, you can use `strlen`. This is useful for checking if the user typed `ENTER` without typing anything (an "empty" input).
+- To compare two strings, you can use the `strcmp` function. This function returns 0 if the strings are exactly equal - for example, to check if the user entered `"0"`  as an exit condition.
