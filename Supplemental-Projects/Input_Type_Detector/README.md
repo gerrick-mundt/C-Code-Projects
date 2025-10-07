@@ -1,6 +1,18 @@
-# Project
+# Purpose
+This program takes user input as a string and examines its contents. If the input consists entirely of digits, it converts the input to an integer and prints the value. If the input contains any non-digit characters, it is treated as a string and printed as-is.
 
-## Code
+# Called Functions
+
+- `isdigit`: Checks if a single character is a digit (0 through 9).  
+  - **Input:** a character (like `'5'` or `'a'`)  
+  - **Output:** an integer that tells you whether the character is a digit:  
+    - `0` → the character is **not** a digit  
+    - nonzero → the character **is** a digit  
+  - **Note:** The actual nonzero number is not important — it just means "true".
+
+- `atoi`: 
+
+# Code
 ```c
 #include <stdio.h>
 #include <string.h>
