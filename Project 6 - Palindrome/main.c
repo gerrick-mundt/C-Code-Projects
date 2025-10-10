@@ -28,7 +28,7 @@ int main()
     for(int i = 0; i < length / 2; i++)
     {
         // Case where input is not a palindrone
-        // We subtract on since C starts index at 0
+        // We subtract 1 since C starts index at 0
         if(buffer[i] != buffer[length - i - 1])
         {
             Palindrome = 0;
